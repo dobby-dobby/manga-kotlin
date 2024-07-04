@@ -11,5 +11,4 @@ fun <T> Resource<T>.toUiState(): UiState<T> {
         is Resource.Success -> UiState.Success(data)
         is Resource.Error -> UiState.Error(message ?: "Unknown error")
         is Resource.Loading -> UiState.Loading
-        null -> UiState.Error("An unexpected error occurred") }
 }
